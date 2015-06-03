@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/omidbachari/solar.svg?branch=master)](https://travis-ci.org/omidbachari/solar) [![Code Climate](https://codeclimate.com/github/omidbachari/solar.png)](https://codeclimate.com/github/omidbachari/solar) [![Coverage Status](https://coveralls.io/repos/omidbachari/solar/badge.png)](https://coveralls.io/r/omidbachari/solar)
