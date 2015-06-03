@@ -1,7 +1,7 @@
 class WattsWrapper
 
   def get(lat, lon)
-    http.get api_url, parameters(lat, lon)
+    JSON.parse(http.get(api_url, parameters(lat, lon)).body)
   end
 
   private
