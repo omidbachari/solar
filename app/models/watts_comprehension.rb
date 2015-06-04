@@ -6,8 +6,10 @@ class WattsComprehension
     if response["errors"].any?
       { errors: response["errors"] }
     else
-      { score: response["outputs"]["ac_annual"],
-        location: response["station_info"]["city"] }
+      {
+        score: response["outputs"]["ac_annual"],
+        location: response["station_info"]["city"]
+      }
     end
   end
 end
