@@ -15,9 +15,9 @@ RSpec.configure do |config|
 end
 
 VCR.configure do |c|
-  c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+  c.cassette_library_dir = "spec/fixtures/vcr_cassettes"
   c.hook_into :webmock
-  c.filter_sensitive_data('<WATTS_KEY>') { ENV['WATTS_KEY'] }
+  c.filter_sensitive_data("<WATTS_KEY>") { ENV["WATTS_KEY"] }
   c.default_cassette_options = { record: :none }
   c.configure_rspec_metadata!
 end
