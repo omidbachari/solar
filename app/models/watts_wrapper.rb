@@ -1,5 +1,4 @@
 class WattsWrapper
-
   def get(lat, lon)
     JSON.parse(http.get(api_url, parameters(lat, lon)).body)
   end
@@ -28,6 +27,6 @@ class WattsWrapper
   end
 
   def api_key
-    ENV['WATTS_KEY']
+    ENV["WATTS_KEY"]
   end
 end
