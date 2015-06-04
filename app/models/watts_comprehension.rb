@@ -5,7 +5,7 @@ class WattsComprehension
     response = wrapper.get(lat, lon)
 
     if response["errors"].any?
-      "Your score could not be computed."
+      { errors: response["errors"] }
     else
       { score: response["outputs"]["ac_annual"],
         location: response["station_info"]["city"] }

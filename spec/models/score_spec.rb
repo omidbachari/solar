@@ -17,7 +17,7 @@ describe Score do
         score = Score.new
         location_score = score.calculate_score(100, 0)
 
-        expect(location_score).to eq "Your score could not be computed."
+        expect(location_score).to eq errors: ["'lat' must be between -90 and 90"]
       end
     end
   end
