@@ -92,31 +92,25 @@ BODY = {
 }
 
 describe WattsWrapper do
-  context "#get" do
+  context "#get", :vcr do
     it "returns an http response with hash" do
-      VCR.use_cassette "initial vcr" do
-        wrapper = WattsWrapper.new
-        response = wrapper.get(42, -71)
+      wrapper = WattsWrapper.new
+      response = wrapper.get(42, -71)
 
-        expect(response.class.to_s).to eq("Hash")
-        expect(response).to eq(BODY)
-      end
+      expect(response.class.to_s).to eq("Hash")
+      expect(response).to eq(BODY)
     end
     it "returns error with invalid lat" do
-      VCR.use_cassette "initial vcr" do
-        wrapper = WattsWrapper.new
-        response = wrapper.get(100, 0)
+      wrapper = WattsWrapper.new
+      response = wrapper.get(100, 0)
 
-        expect(response["errors"].any?).to be true
-      end
+      expect(response["errors"].any?).to be true
     end
     it "returns error with invalid lon" do
-      VCR.use_cassette "initial vcr" do
-        wrapper = WattsWrapper.new
-        response = wrapper.get(0, 200)
+      wrapper = WattsWrapper.new
+      response = wrapper.get(0, 200)
 
-        expect(response["errors"].any?).to be true
-      end
+      expect(response["errors"].any?).to be true
     end
   end
 end

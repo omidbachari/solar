@@ -12,7 +12,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Thu, 04 Jun 2015 18:52:35 GMT
+      - Thu, 04 Jun 2015 18:52:44 GMT
   response:
     status:
       code: 200
@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 04 Jun 2015 18:52:22 GMT
+      - Thu, 04 Jun 2015 18:52:31 GMT
       Etag:
       - '"bb6a193391adba71155e985e44e6fc15"'
       Server:
@@ -45,13 +45,13 @@ http_interactions:
       X-Ratelimit-Limit:
       - '1000'
       X-Ratelimit-Remaining:
-      - '998'
+      - '992'
       X-Request-Id:
-      - e6bc6adf-a57d-493f-a493-2fe3223bcfc8
+      - 4ebf2230-d4ba-44e9-9c37-894eb5dc49b0
       X-Runtime:
-      - '0.179383'
+      - '0.168285'
       X-Varnish:
-      - '16053126'
+      - '16939562'
       Content-Length:
       - '1286'
       Connection:
@@ -61,64 +61,5 @@ http_interactions:
       string: '{"inputs":{"lat":"42","lon":"-71","system_capacity":"500000","module_type":"1","losses":"0","array_type":"1","tilt":"45","azimuth":"180"},"errors":[],"warnings":[],"version":"1.1.0","ssc_info":{"version":34,"build":"Unix
         64 bit GNU/C++ Aug 18 2014 13:38:36"},"station_info":{"lat":42.36666488647461,"lon":-71.03333282470703,"elev":5.0,"tz":-5.0,"location":"14739","city":"BOSTON","state":"MA","solar_resource_file":"14739.tm2","distance":41097},"outputs":{"ac_monthly":[52803744.0,58672388.0,70227000.0,69366360.0,75493528.0,72411088.0,77147656.0,78098360.0,70271424.0,68329664.0,46420216.0,45948544.0],"poa_monthly":[105.56478118896484,119.45948028564453,147.4891357421875,146.05984497070312,162.46176147460938,159.03756713867188,170.4688720703125,172.92881774902344,153.42535400390625,145.11585998535156,95.10961151123047,92.74807739257812],"solrad_monthly":[3.405315637588501,4.266409873962402,4.75771427154541,4.868661403656006,5.240702152252197,5.301252365112305,5.498995780944824,5.5783491134643555,5.114178657531738,4.681156635284424,3.1703202724456787,2.9918735027313232],"dc_monthly":[55371760.0,62102404.0,74905888.0,73197968.0,79118128.0,75795904.0,80705048.0,81621528.0,73463168.0,71394168.0,48641548.0,48124000.0],"ac_annual":785190016.0,"solrad_annual":4.572910785675049}}'
     http_version: 
-  recorded_at: Thu, 04 Jun 2015 18:52:36 GMT
-- request:
-    method: get
-    uri: https://developer.nrel.gov/api/pvwatts/v5.json?api_key=<WATTS_KEY>&array_type=1&azimuth=180&lat=100&lon=0&losses=0&module_type=1&system_capacity=500000&tilt=45
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      User-Agent:
-      - HTTPClient/1.0 (2.6.0.1, ruby 2.2.1 (2015-02-26))
-      Accept:
-      - "*/*"
-      Date:
-      - Thu, 04 Jun 2015 18:52:36 GMT
-  response:
-    status:
-      code: 422
-      message: Unprocessable Entity
-    headers:
-      Access-Control-Allow-Origin:
-      - "*"
-      Age:
-      - '0'
-      Cache-Control:
-      - no-cache
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Thu, 04 Jun 2015 18:52:22 GMT
-      Server:
-      - nginx
-      Set-Cookie:
-      - BNI_mea-apis-prod-persist=0000000000000000000000001b0811ac00005000; Max-age=86400
-      Vary:
-      - Origin
-      Via:
-      - 1.1 varnish-v4
-      X-Cache:
-      - MISS
-      X-Ratelimit-Limit:
-      - '1000'
-      X-Ratelimit-Remaining:
-      - '997'
-      X-Request-Id:
-      - b1df1396-0a00-4244-946c-73da1cdd793a
-      X-Runtime:
-      - '0.003789'
-      X-Varnish:
-      - '16939488'
-      Content-Length:
-      - '305'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"inputs":{"lat":"100","lon":"0","system_capacity":"500000","module_type":"1","losses":"0","array_type":"1","tilt":"45","azimuth":"180"},"errors":["''lat''
-        must be between -90 and 90"],"warnings":[],"version":"1.1.0","ssc_info":{"version":34,"build":"Unix
-        64 bit GNU/C++ Aug 18 2014 13:38:36"},"outputs":{}}'
-    http_version: 
-  recorded_at: Thu, 04 Jun 2015 18:52:36 GMT
+  recorded_at: Thu, 04 Jun 2015 18:52:44 GMT
 recorded_with: VCR 2.9.3

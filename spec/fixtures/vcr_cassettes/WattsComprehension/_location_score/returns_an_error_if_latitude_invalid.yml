@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://developer.nrel.gov/api/pvwatts/v5.json?api_key=<WATTS_KEY>&array_type=1&azimuth=180&lat=100&lon=0&losses=0&module_type=1&system_capacity=500000&tilt=45
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.2.1 (2015-02-26))
+      Accept:
+      - "*/*"
+      Date:
+      - Thu, 04 Jun 2015 18:52:36 GMT
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Age:
+      - '0'
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 04 Jun 2015 18:52:23 GMT
+      Server:
+      - nginx
+      Set-Cookie:
+      - BNI_mea-apis-prod-persist=0000000000000000000000001b0811ac00005000; Max-age=86400
+      Vary:
+      - Origin
+      Via:
+      - 1.1 varnish-v4
+      X-Cache:
+      - MISS
+      X-Ratelimit-Limit:
+      - '1000'
+      X-Ratelimit-Remaining:
+      - '995'
+      X-Request-Id:
+      - 63c36a98-3cd7-42d0-ab26-fd1091e164e2
+      X-Runtime:
+      - '0.003797'
+      X-Varnish:
+      - '16053135'
+      Content-Length:
+      - '305'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"inputs":{"lat":"100","lon":"0","system_capacity":"500000","module_type":"1","losses":"0","array_type":"1","tilt":"45","azimuth":"180"},"errors":["''lat''
+        must be between -90 and 90"],"warnings":[],"version":"1.1.0","ssc_info":{"version":34,"build":"Unix
+        64 bit GNU/C++ Aug 18 2014 13:38:36"},"outputs":{}}'
+    http_version: 
+  recorded_at: Thu, 04 Jun 2015 18:52:36 GMT
+recorded_with: VCR 2.9.3
